@@ -5,3 +5,10 @@ SELECT
   s_last,
   TRUNC((SYSDATE - s_dob)/365.25) AS approximate_age
 FROM student;
+
+-- Question 3: Lab 3
+SELECT REPLACE(REPLACE(course_name, 'Intro', 'Introduction'), 
+    'Mgmt', 'Management') AS replaced_text
+FROM course
+WHERE course_name LIKE '%Intro%' 
+   OR course_name LIKE '%Mgmt%';
